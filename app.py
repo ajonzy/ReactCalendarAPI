@@ -126,7 +126,7 @@ def get_one_reminder(month_id, date):
 
 @app.route("/reminder/update/<id>", methods=["PUT"])
 def update_reminder(id):
-    reminder = db.session.query(Reminder).filter(Reminder.id == id).first()
+    reminderr = db.session.query(Reminder).filter(Reminder.id == id).first()
     if reminder is None:
         return jsonify(f"Error: No reminder with id {id}.")
 
